@@ -32,6 +32,7 @@
     .btn-send { width: 100%; background: var(--accent); color: #fff; margin-top: 16px; }
     .btn-send:disabled { opacity: .5; cursor: default; }
     .btn-send.ok { background: var(--good); }
+    .note-i { font-style: italic; font-size: 12px; color: var(--muted); margin-top: 6px; }
     .msg { text-align: center; color: var(--good); font-size: 13px; font-weight: 600; height: 18px; margin-top: 8px; opacity: 0; transition: opacity .2s; }
     .msg.show { opacity: 1; }
     .log { list-style: none; }
@@ -113,8 +114,9 @@
                 <div><label>Datum</label><input type="date" id="date" /></div>
                 <div><label>Dauer</label><select id="minutes">${minuteOptions(60)}</select></div>
               </div>
-              <label>Was habt ihr gemacht? / Mitteilung (optional)</label>
-              <textarea id="notes" placeholder="Kurz in Stichworten – z. B.:&#10;• Thema / Kapitel&#10;• Fortschritt, Hausaufgaben&#10;• Mitteilung an die Lern Academy"></textarea>
+              <label>Was habt ihr gemacht? Allfällige Mitteilungen?</label>
+              <textarea id="notes" placeholder="Kurz in Stichworten – z. B.:&#10;• Thema / Kapitel, Fortschritt, Hausaufgaben&#10;• Allfällige Mitteilung, z. B. „Schüler wird 2 Wochen Ferien machen“"></textarea>
+              <div class="note-i">Dringende Mitteilungen bitte über WhatsApp (z. B. ab 3 Wochen Unterbruch).</div>
               <button class="btn-send" id="submit">Lektion melden</button>
               <div class="msg" id="msg"></div>
             </div>
